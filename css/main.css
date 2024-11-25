@@ -274,3 +274,41 @@ footer a:not(.nav-link) {
 .entry-title a {
   text-decoration: none;
 }
+
+
+.certificate-card {
+  transition: transform 0.6s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden; /* Pastikan gambar tidak meluber keluar */
+}
+
+.certificate-card .certificate-content {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px); /* Memulai dengan sedikit kebawah */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Perpanjang durasi transisi */
+}
+
+.certificate-card:hover .certificate-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0); /* Muncul dari bawah */
+}
+
+.certificate-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Menambah bayangan saat hover */
+  transform: translateY(-5px); /* Sedikit naik saat hover */
+}
+
+.certificate-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.certificate-card:hover .certificate-image {
+  transform: scale(1.05); /* Efek perbesaran gambar */
+}

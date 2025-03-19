@@ -88,7 +88,35 @@
     )
   }))
 
-  // Add your javascript here
+  document.addEventListener("DOMContentLoaded", function() {
+    let text = "Web Developer";
+    let i = 0;
+    let speed = 100; // Kecepatan mengetik (ms)
+    let eraseSpeed = 50; // Kecepatan menghapus (ms)
+    let delay = 1000; // Jeda setelah mengetik
+
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById("typing-text").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        } else {
+            setTimeout(eraseText, delay);
+        }
+    }
+
+    function eraseText() {
+        if (i > 0) {
+            document.getElementById("typing-text").innerHTML = text.substring(0, i - 1);
+            i--;
+            setTimeout(eraseText, eraseSpeed);
+        } else {
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    typeWriter();
+});
 
 
 })();

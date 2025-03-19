@@ -50,6 +50,12 @@ html {
   line-height: 2.5rem;
 }
 
+#typing-text {
+  min-height: 24px; /* Sesuaikan tinggi teks */
+  display: inline-block;
+}
+
+
 .nav-link:hover,
 .nav-link:focus,
 .active .nav-link {

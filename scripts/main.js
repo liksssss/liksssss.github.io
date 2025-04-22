@@ -89,7 +89,7 @@
   }))
 
   document.addEventListener("DOMContentLoaded", function() {
-    let text = "Web Developer";
+    let text = "Web Developer  | IT Support | Graphic Design";
     let i = 0;
     let speed = 100; // Kecepatan mengetik (ms)
     let eraseSpeed = 50; // Kecepatan menghapus (ms)
